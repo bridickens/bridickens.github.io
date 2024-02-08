@@ -70,5 +70,7 @@ li{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
+.resize{
+    height: 260px;
+    width: 280px;
+}
