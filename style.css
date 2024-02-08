@@ -71,7 +71,7 @@ li{
     display: block;
 }
 
-#resize{
+.img-fluid{
     height: 260px;
     width: 290px;
 }
