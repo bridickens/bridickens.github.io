@@ -1,24 +1,62 @@
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=20h0u0kaYup33PN6EDSfWprkl0n */
+
+/* .color-primary-0 { color: #F2B99F }  Main Primary color 
+.color-primary-1 { color: #FFEEE7 }
+.color-primary-2 { color: #FFDBCA }
+.color-primary-3 { color: #CB8566 }
+.color-primary-4 { color: #030201 }
+
+.color-complement-0 { color: #6CA48E }	Main Complement color 
+.color-complement-1 { color: #CDE2DA }
+.color-complement-2 { color: #9BC3B4 }
+.color-complement-3 { color: #45896F }
+.color-complement-4 { color: #010201 }
+
+*/
+
+:root {
+    --primaryColor: #F2B99F;
+    --lightPrimaryColor: #FFDBCA;
+    --darkPrimaryColor: #CB8566;
+    --complementColor: #6CA48E;
+    --lightComplementColor: #9BC3B4;
+    --darkComplementColor: #45896F;
+    --greyBack: #C5C5C5;
+    --middleGrey: #D9D9D9;
+    --darkGrey: #2D2D2D;
+    --boxShadowColor: #888888;
+}
+
+
+
 body{
-    background-color: aliceblue;
+    background-color: var(--primaryColor);
 }
 
 h1{
     font-style: normal;
     font-weight: bold;
-    color: #003653;
+    color: var(--darkPrimaryColor);
 }
 h3{
     font-weight: lighter;
     font-style: italic;
-    color:  #006298 ;
+    color: var(--darkPrimaryColor);
 }
 h2{
-    color:  #006298 ;
+    color: var(--darkPrimaryColor) ;
 }
 li{
     color: #006298;
 }
+nav{
+    background-color: var(--complementColor);
+}
 
+nav a:hover{
+    background-color: var(--lightComplementColor);
+}
 .navBar a {
     float: left;
     font-size: 16px;
@@ -26,7 +64,9 @@ li{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}.dropdown {
+}
+
+.dropdown {
     float: left;
     overflow: hidden;
 }
@@ -41,7 +81,6 @@ li{
     font-family: inherit;
     margin: 0;
 }
-
 
 #resize{
     height: 260px;
