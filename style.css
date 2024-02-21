@@ -15,6 +15,16 @@
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+
+.peddana-regular {
+    font-family: "Peddana", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+
 :root {
     --primaryColor: #F2B99F;
     --lightPrimaryColor: #FFDBCA;
@@ -28,8 +38,15 @@
     --boxShadowColor: #888888;
 }
 
-
-
+*{
+    font-family: "Peddana", serif;
+}
+p{
+    font-size: 20px;
+}
+strong{
+    font-size: 30px;
+}
 body{
     background-color: var(--primaryColor);
 }
@@ -54,16 +71,24 @@ nav{
     background-color: var(--complementColor);
 }
 
+nav a {
+    font-size: 50px;
+    font-weight: bold;
+}
 nav a:hover{
     background-color: var(--lightComplementColor);
+    font-size:20px;
 }
 .navBar a {
     float: left;
-    font-size: 16px;
+    font-size: 20px;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+a{
+    font-size: 20px;
 }
 
 .dropdown {
