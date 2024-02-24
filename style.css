@@ -15,16 +15,20 @@
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap'); 
 
-.peddana-regular {
-    font-family: "Peddana", serif;
+.forum-regular {
+    font-family: "Forum", serif;
     font-weight: 400;
     font-style: normal;
   }
-  
-  
 
+  *{
+    font-family: "Forum", serif;
+  }
+div{
+    background-color: white;
+}
 :root {
     --primaryColor: #F2B99F;
     --lightPrimaryColor: #FFDBCA;
@@ -38,9 +42,6 @@
     --boxShadowColor: #888888;
 }
 
-*{
-    font-family: "Peddana", serif;
-}
 p{
     font-size: 20px;
 }
@@ -48,37 +49,59 @@ strong{
     font-size: 30px;
 }
 body{
-    background-color: var(--primaryColor);
+    background-image: url("background.png");
+    background-size:contain;
+}
+.container{
+    background-color: white;
+
+}
+
+i{
+    font-size: 25px;
+    color: var(--darkComplementColor);
+}
+i:hover{
+    color: var(--lightComplementColor);
 }
 
 h1{
     font-style: normal;
     font-weight: bold;
-    color: var(--darkPrimaryColor);
+    color: var(--darkComplementColor);
 }
 h3{
     font-weight: lighter;
     font-style: italic;
-    color: var(--darkPrimaryColor);
+    color: var(--darkComplementColor);
 }
 h2{
-    color: var(--darkPrimaryColor) ;
+    color: var(--darkComplementColor);
 }
 li{
     color: #006298;
 }
-nav{
-    background-color: var(--complementColor);
+
+nav {
+    border-radius: 25px;
+    text-align: center;
+    padding:2rem;
 }
 
-nav a {
-    font-size: 50px;
-    font-weight: bold;
-}
-nav a:hover{
-    background-color: var(--lightComplementColor);
-    font-size:20px;
-}
+    nav a {
+        color: var(--darkComplementColor);
+        text-decoration-line: none;
+    }
+    a:hover {
+     
+        text-decoration-line: underline;
+    }
+    
+
+    nav li {
+        display: inline;
+        padding: 0rem 1rem 0rem;
+    }
 .navBar a {
     float: left;
     font-size: 20px;
@@ -110,9 +133,26 @@ a{
 #resize{
     height: 260px;
     width: 280px;
+    border-style: solid;
+    border-color: #45896F;
+    box-shadow: 5px 10px 10px #45896F;
+   
+    position: relative;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
 }
-
+@keyframes fadein {
+    0%   {opacity: 0; left:200px;}
+    100% {opacity: 1; left:0px;}
+  }
+hr{
+    color: var(--darkComplementColor);
+}
 .img-fluid{
     max-width: 100%;
     height: auto;
+}
+#footer{
+    text-align: center;
 }
