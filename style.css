@@ -50,7 +50,7 @@ strong{
 }
 body{
     background-image: url("background.png");
-    background-size:contain;
+    background-size:repeat;
 }
 .container{
     background-color: white;
@@ -155,4 +155,5 @@ hr{
 }
 #footer{
     text-align: center;
+    
 }
