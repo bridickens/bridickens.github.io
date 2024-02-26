@@ -155,5 +155,6 @@ hr{
 }
 #footer{
     text-align: center;
+    position: sticky;
     
 }
