@@ -26,8 +26,15 @@
   *{
     font-family: "Forum", serif;
   }
-div{
+.container {
+    position: relative;
+    z-index: 1;
     background-color: white;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: transparent;
 }
 :root {
     --primaryColor: #F2B99F;
@@ -48,14 +55,8 @@ p{
 strong{
     font-size: 30px;
 }
-body{
-    background-image: url("background.png");
-    background-size:repeat;
-}
-.container{
-    background-color: white;
 
-}
+
 
 i{
     font-size: 25px;
@@ -132,10 +133,10 @@ a{
 
 #resize{
     height: 260px;
-    width: 260px;
+    width: 280px;
     border-style: solid;
-    border-color: #45896F;
-    box-shadow: 5px 10px 10px #45896F;
+    border-color: #1b245a;
+    box-shadow: 5px 10px 10px #1b245a;
    
     position: relative;
     animation-name: fadein;
@@ -158,49 +159,121 @@ hr{
     position: sticky;
     
 }
-div.gallery {
-  border: 1px solid #ccc;
+
+
+/* ===== Animated Background ===== */
+
+.area {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    background: linear-gradient(135deg, #0b1026, #1b245a);
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+.circles {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
+.circles li {
+   position: absolute;
+    list-style: none;
+
+    background: white;
+    opacity: 0.85;
+
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+
+    animation-name: animate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation:
+        animate 20s linear infinite,
+        twinkle 3s ease-in-out infinite;
+
+    bottom: -120px;
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
+.circles li:nth-child(1) {
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 18s;
 }
 
-* {
-  box-sizing: border-box;
+.circles li:nth-child(2) {
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 22s;
+    animation-delay: 2s;
 }
 
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
+.circles li:nth-child(3) {
+    left: 40%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 16s;
+    animation-delay: 4s;
 }
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
+.circles li:nth-child(4) {
+    left: 55%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 26s;
+    animation-delay: 1s;
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
+.circles li:nth-child(5) {
+    left: 70%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 20s;
+    animation-delay: 3s;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.circles li:nth-child(6) {
+    left: 85%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 14s;
+    animation-delay: 5s;
 }
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+@keyframes twinkle {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+
+
+
+
