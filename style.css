@@ -15,8 +15,38 @@
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap'); 
+/* @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');  */
+ @font-face {
+    font-family: 'Kollektif Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kollektif Regular'), url('fonts/Kollektif.woff') format('woff');
+    }
+    
 
+    @font-face {
+    font-family: 'Kollektif Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kollektif Italic'), url('fonts/Kollektif-Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Kollektif Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kollektif Bold'), url('fonts/Kollektif-Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Kollektif Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Kollektif Bold Italic'), url('fonts/Kollektif-BoldItalic.woff') format('woff');
+    }
+/* 
 .forum-regular {
     font-family: "Forum", serif;
     font-weight: 400;
@@ -25,7 +55,7 @@
 
   *{
     font-family: "Forum", serif;
-  }
+  } */
 .container {
     position: relative;
     z-index: 1;
@@ -84,7 +114,7 @@ h2{
 
 nav {
     border-radius: 25px;
-    text-align: center;
+    text-align: left;
     padding:2rem;
 }
 
